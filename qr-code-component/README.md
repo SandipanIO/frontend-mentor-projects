@@ -28,7 +28,7 @@ This QR card component has been built using HTML and CSS. I have used BEM (Block
 
 ## Links
 
-- Get the code here: [Code]()
+- Get the code here: [Code](https://github.com/SandipanIO/frontend-mentor-projects/tree/main/qr-code-component)
 - Check out the demo: [Demo](https://sandipan-qr-code-component.netlify.app/)
 
 
