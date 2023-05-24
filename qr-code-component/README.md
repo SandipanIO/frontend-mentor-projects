@@ -24,7 +24,7 @@ This QR card component has been built using HTML and CSS. I have used BEM (Block
 
 **Mobile version:**
 
-![Mobile Version of QR Card Component](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/qr-code-component/screenshots/qr-code-component-mobile-version.png)
+![Mobile Version of QR Card Component](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/qr-code-component/screenshots/qr-code-component-mobile-version.jpg)
 
 ## Links
 
