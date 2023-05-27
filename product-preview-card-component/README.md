@@ -24,7 +24,7 @@ This product preview card component has been built using HTML and CSS. I have us
 
 **Mobile version:**
 
-![Mobile Version of QR Card Component](https://github.com/SandipanIO/frontend-mentor-projects/raw/main/product-preview-card-component/screenshots/product-preview-card-component-mobile-version.png)
+![Mobile Version of QR Card Component](https://github.com/SandipanIO/frontend-mentor-projects/raw/main/product-preview-card-component/screenshots/product-preview-card-component-mobile-version.jpg)
 
 ## Links
 
