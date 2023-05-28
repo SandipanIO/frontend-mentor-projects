@@ -37,6 +37,7 @@ This NFT preview card component has been built using HTML and CSS. I have used B
 - HTML
 - CSS
 - Flexbox
+- CSS Grid
 
 ## Author
 
