@@ -154,6 +154,12 @@ a:active {
    font-size: 1.7rem;
 }
 
+@media only screen and (max-width: 450px) {
+   .nft-card__creator {
+      font-size: 1.5rem;
+   }
+}
+
 .nft-card__creator-photo {
    width: 4rem;
    height: 4rem;
