@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+   <!-- Main Stylesheet -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <title>NFT Preview Card Component</title>
+</head>
+<body>
+   <main class="main">
+      <div class="nft-card">
+         <picture class="nft-card__image-box">
+            <img class="nft-card__image" src="images/image-equilibrium.jpg" alt="A photo of Equilibrium #3429 NFT">
+            <div class="overlay">
+               <img class="overlay__icon" src="images/icon-view.svg" alt="a view icon">
+            </div>
+         </picture>
+         <div class="nft-card__content">
+            <h1 class="nft-card__name">
+               <a href="#">Equilibrium #3429</a>
+            </h1>
+            <p class="nft-card__description">
+               Our Equilibrium collection promotes balance and calm.
+            </p>
+            <div class="nft-card__details">
+               <p class="nft-card__price align-center">
+                  <img src="images/icon-ethereum.svg" alt="an icon of ethereum">
+                  <span>0.041 ETH</span>
+               </p>
+               <p class="nft-card__time-left align-center">
+                  <img src="images/icon-clock.svg" alt="an icon of a clock">
+                  <span>3 days left</span>
+               </p>
+            </div>
+            <div class="nft-card__creator align-center">
+               <img class="nft-card__creator-photo" src="images/image-avatar.png" alt="a picture of Jules Wyvern, the creator of Equilibrium #3429">
+               <p>Creation of <a href="#">Jules Wyvern</a></p>
+            </div>
+         </div>
+      </div>
+   </main>
+   <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+     &#124; Coded by <a href="https://twitter.com/SandipanIO" target="_blank">Sandipan Mukherjee</a>.
+   </footer>
+</body>
+</html>
