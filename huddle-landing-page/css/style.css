@@ -6,7 +6,7 @@
    --color-transparent-white: hsla(0, 0%, 100%, 0.9);
    --color-white: hsl(0, 0%, 100%);
 
-   --max-width: calc(1200rem / 16);
+   --max-width: calc(1250rem / 16);
 }
 
 *,
@@ -118,18 +118,11 @@ h2 {
 /********** Header **********/
 
 .header {
-   min-height: 100vh;
    background: var(--color-pale-cyan) url(../images/bg-hero-desktop.svg);
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   padding-bottom: calc(10rem / 16);
-}
-
-.header__wrapper {
-   min-height: 100vh;
-   display: grid;
-   grid-template-rows: calc(150rem / 16) auto;
+   padding-bottom: calc(50rem / 16);
 }
 
 @media only screen and (max-width: 768px) {
@@ -144,6 +137,7 @@ h2 {
 /********** Main Nav **********/
 
 .main-nav {
+   min-height: calc(150rem / 16);
    display: flex;
    justify-content: space-between;
    align-items: center;
