@@ -6,7 +6,7 @@
    --color-transparent-white: hsla(0, 0%, 100%, 0.9);
    --color-white: hsl(0, 0%, 100%);
 
-   --max-width: calc(1250rem / 16);
+   --max-width: calc(1200rem / 16);
 }
 
 *,
@@ -126,6 +126,12 @@ h2 {
    padding-bottom: calc(10rem / 16);
 }
 
+.header__wrapper {
+   min-height: 100vh;
+   display: grid;
+   grid-template-rows: calc(150rem / 16) auto;
+}
+
 @media only screen and (max-width: 768px) {
    .header {
       background: var(--color-pale-cyan) url(../images/bg-hero-mobile.svg);
@@ -138,7 +144,6 @@ h2 {
 /********** Main Nav **********/
 
 .main-nav {
-   min-height: calc(150rem / 16);
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -166,7 +171,6 @@ h2 {
    display: grid;
    grid-template-columns: 43% 52%;
    gap: 5%;
-   margin-top: calc(30rem / 16);
 }
 
 .hero-section__content {
@@ -185,7 +189,7 @@ h2 {
 .hero-section__image {
    width: 100%;
    height: 100%;
-   object-fit: cover;
+   object-fit: contain;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -392,14 +396,14 @@ footer a:active {
    list-style: none;
 }
 
-.contact-box__contact-details {
+.contact-box__details {
    display: grid;
    grid-template-columns: calc(30rem / 16) auto;
    gap: calc(10rem / 16);
    align-items: center;
 }
 
-.contact-box__contact-details:not(:last-child) {
+.contact-box__details:not(:last-child) {
    margin-bottom: calc(20rem / 16);
 }
 
