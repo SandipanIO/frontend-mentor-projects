@@ -29,34 +29,6 @@ body {
    color: var(--color-grayish-blue);
 }
 
-/********** Heading Tags **********/
-
-h1,
-h2 {
-   font-family: "Poppins", sans-serif;
-   font-weight: 600;
-   color: var(--color-dark-cyan);
-}
-
-h1 {
-   font-size: calc(40rem / 16);
-}
-
-h2 {
-   font-size: calc(30rem / 16);
-}
-
-@media only screen and (max-width: 768px) {
-   h1 {
-      font-size: calc(35rem / 16);
-   }
-
-   h1,
-   h2 {
-      line-height: 1.4;
-   }
-}
-
 /********** Container **********/
 
 .container {
@@ -65,13 +37,43 @@ h2 {
    margin: 0 auto;
 }
 
+/********** Heading Tags **********/
+
+.heading-1,
+.heading-2 {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   color: var(--color-dark-cyan);
+}
+
+.heading-1 {
+   font-size: calc(40rem / 16);
+}
+
+.heading-2 {
+   font-size: calc(30rem / 16);
+}
+
+@media only screen and (max-width: 768px) {
+   .heading-1 {
+      font-size: calc(35rem / 16);
+   }
+
+   .heading-1,
+   .heading-2 {
+      line-height: 1.4;
+   }
+}
+
 /********** Button **********/
 
 .btn {
+   display: inline-block;
    font-size: calc(16rem / 16);
    font-weight: 700;
    text-transform: capitalize;
-   padding: calc(20rem / 16) calc(50rem / 12);
+   text-decoration: none;
+   padding: calc(15rem / 16) calc(45rem / 12);
    border: none;
    border-radius: calc(40rem / 16);
    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15);
@@ -95,35 +97,30 @@ h2 {
 
 .btn--large {
    font-size: calc(20rem / 16);
-   letter-spacing: 1px;
 }
 
 @media only screen and (max-width: 768px) {
    .btn {
-      padding: calc(20rem / 16) calc(35rem / 12);
+      padding: calc(15rem / 16) calc(35rem / 12);
    }
 
    .btn--small {
-      padding: calc(15rem / 16) calc(25rem / 12);
+      padding: calc(12rem / 16) calc(25rem / 12);
    }
 
    .btn--large {
       font-size: calc(16rem / 16);
-      letter-spacing: unset;
    }
 }
 
 @media only screen and (max-width: 360px) {
-   .btn {
-      padding: calc(12rem / 16) calc(25rem / 12);
-   }
-
    .btn--small {
       padding: calc(10rem / 16) calc(12rem / 12);
    }
 
    .btn--large {
       font-size: calc(15rem / 16);
+      padding: calc(15rem / 16) calc(25rem / 12);
    }
 }
 
@@ -135,7 +132,7 @@ h2 {
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   padding-bottom: calc(50rem / 16);
+   padding-bottom: calc(55rem / 16);
 }
 
 @media only screen and (max-width: 768px) {
@@ -147,20 +144,21 @@ h2 {
    }
 }
 
-/********** Main Nav **********/
+/********** Top Bar **********/
 
-.main-nav {
-   min-height: calc(150rem / 16);
+.top-bar {
    display: flex;
    justify-content: space-between;
    align-items: center;
-}
-
-.main-nav a {
-   line-height: 0;
+   padding: calc(50rem / 16) 0;
 }
 
 /********** Logo **********/
+
+.logo-link {
+   line-height: 1;
+   text-decoration: none;
+}
 
 .logo {
    width: clamp(calc(150rem / 16), 14vw, calc(210rem / 16));
@@ -197,6 +195,12 @@ h2 {
    width: 100%;
    height: 100%;
    object-fit: cover;
+}
+
+@media only screen and (max-width: 1080px) {
+   .hero-section__image {
+      object-fit: contain;
+   }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -428,13 +432,9 @@ footer a:active {
 
 /********** Footer Middle (Footer Nav) **********/
 
-.footer-nav {
-   display: flex;
-   justify-content: space-around;
-}
-
 .footer-nav__list {
    list-style: none;
+   columns: 2;
 }
 
 .footer-nav__item {
@@ -442,25 +442,23 @@ footer a:active {
 }
 
 @media only screen and (max-width: 850px) {
-   .footer-nav {
-      flex-direction: column;
-      justify-content: flex-start;
+   .footer-nav__list {
+      columns: 1;
    }
 }
 
-/********** Footer Middle (Social Nav) **********/
+/********** Footer Middle (Social Media Links) **********/
 
-.social-nav__list {
+.social-media {
    list-style: none;
    display: flex;
-   justify-content: center;
 }
 
-.social-nav__item:not(:last-child) {
+.social-media__item:not(:last-child) {
    margin-right: calc(18rem / 16);
 }
 
-.social-nav__link {
+.social-media__link {
    display: inline-block;
    line-height: 0;
    font-size: 0;
@@ -469,9 +467,15 @@ footer a:active {
    border-radius: 50%;
 }
 
-.social-nav__icon {
+.social-media__icon {
    width: calc(20rem / 16);
    height: calc(20rem / 16);
+}
+
+@media only screen and (max-width: 850px) {
+   .social-media {
+      justify-content: center;
+   }
 }
 
 /********** Footer Bottom **********/
