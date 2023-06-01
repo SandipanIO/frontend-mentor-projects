@@ -20,25 +20,25 @@
 <body>
    <header class="header">
       <div class="container">
-         <nav class="main-nav" aria-label="main">
-            <a href="#">
-               <img class="logo" src="images/logo.svg" alt="Logo of Huddle">
+         <div class="top-bar">
+            <a href="#" class="logo-link">
+               <img class="logo" src="images/logo.svg" alt="Huddle">
             </a>
-            <button class="btn btn--bg-white btn--small">
+            <a href="#" class="btn btn--bg-white btn--small">
                Try it free
-            </button>
-         </nav>
+            </a>
+         </div>
          <section class="hero-section">
             <div class="hero-section__content">
-               <h1 class="hero-section__title">
+               <h1 class="heading-1 hero-section__title">
                   Build The Community Your Fans Will Love
                </h1>
                <p class="hero-section__text">
                   Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
                </p>
-               <button class="btn btn--bg-pink">
+               <a href="#" class="btn btn--bg-pink">
                   Get Started For Free
-               </button>
+               </a>
             </div>
             <figure>
                <img class="hero-section__image" src="images/illustration-mockups.svg" alt="">
@@ -51,51 +51,51 @@
          <section class="features">
             <div class="features__box">
                <div class="features__content">
-                  <h2 class="features__title">
+                  <h2 class="heading-2 features__title">
                      Grow Together
                   </h2>
                   <p class="features__text">
                      Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
                   </p>
                </div>
-               <figure class="features__image-box">
+               <div class="features__image-box">
                   <img class="features__image" src="images/illustration-grow-together.svg" alt="">
-               </figure>
+               </div>
             </div>
             <div class="features__box features__reverse-box">
                <div class="features__content">
-                  <h2 class="features__title">
+                  <h2 class="heading-2 features__title">
                      Flowing Conversations
                   </h2>
                   <p class="features__text">
                      You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.
                   </p>
                </div>
-               <figure class="features__reverse-image-box">
+               <div class="features__reverse-image-box">
                   <img class="features__image" src="images/illustration-flowing-conversation.svg" alt="">
-               </figure>
+               </div>
             </div>
             <div class="features__box">
                <div class="features__content">
-                  <h2 class="features__title">
+                  <h2 class="heading-2 features__title">
                      Your Users
                   </h2>
                   <p class="features__text">
                      It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
                   </p>
                </div>
-               <figure class="features__image-box">
+               <div class="features__image-box">
                   <img class="features__image" src="images/illustration-your-users.svg" alt="">
-               </figure>
+               </div>
             </div>
          </section>
          <section class="cta-box">
-            <h2 class="cta-box__heading">
+            <h2 class="heading-2 cta-box__heading">
                Ready To Build Your Community?
             </h2>
-            <button class="btn btn--bg-pink btn--large">
+            <a href="#" class="btn btn--bg-pink btn--large">
                Get Started For Free
-            </button>
+            </a>
          </section>
       </div>
    </main>
@@ -105,45 +105,47 @@
             <img class="logo-large" src="images/logo-white.svg" alt="Logo of Huddle">
          </div>
          <div class="footer-middle">
-            <ul class="contact-box">
-               <li class="contact-box__details">
+            <ul class="contact-box" role="list">
+               <li class="contact-box__details" role="listitem">
                   <img class="contact-box__icon first-icon" src="images/icon-location.svg" alt="">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                </li>
-               <li class="contact-box__details">
+               <li class="contact-box__details" role="listitem">
                   <img class="contact-box__icon" src="images/icon-phone.svg" alt="">
                   <p>+1-543-123-4567</p>
                </li>
-               <li class="contact-box__details">
+               <li class="contact-box__details" role="listitem">
                   <img class="contact-box__icon" src="images/icon-email.svg" alt="">
                   <p>example@huddle.com</p>
                </li>
             </ul>
-            <nav class="footer-nav" aria-label="footer">
-               <ul class="footer-nav__list">
-                  <li class="footer-nav__item"><a href="#">About Us</a></li>
-                  <li class="footer-nav__item"><a href="#">What We Do</a></li>
-                  <li class="footer-nav__item"><a href="#">FAQ</a></li>
-               </ul>
-               <ul class="footer-nav__list">
-                  <li class="footer-nav__item"><a href="#">Career</a></li>
-                  <li class="footer-nav__item"><a href="#">Blog</a></li>
-                  <li class="footer-nav__item"><a href="#">Contact Us</a></li>
+            <nav class="footer-nav">
+               <ul class="footer-nav__list" role="list">
+                  <li class="footer-nav__item" role="listitem"><a href="#">About Us</a></li>
+                  <li class="footer-nav__item" role="listitem"><a href="#">What We Do</a></li>
+                  <li class="footer-nav__item" role="listitem"><a href="#">FAQ</a></li>
+                  <li class="footer-nav__item" role="listitem"><a href="#">Career</a></li>
+                  <li class="footer-nav__item" role="listitem"><a href="#">Blog</a></li>
+                  <li class="footer-nav__item" role="listitem"><a href="#">Contact Us</a></li>
                </ul>
             </nav>
-            <nav class="social-nav" aria-label="social links">
-               <ul class="social-nav__list">
-                  <li class="social-nav__item">
-                     <a class="social-nav__link" href="#"><img class="social-nav__icon" src="images/facebook.svg" alt="Facebook icon linking to Huddle Facebook page"></a>
-                  </li>
-                  <li class="social-nav__item">
-                     <a class="social-nav__link" href="#"><img class="social-nav__icon" src="images/twitter.svg" alt="Twitter icon linking to Huddle Twitter account"></a>
-                  </li>
-                  <li class="social-nav__item">
-                     <a class="social-nav__link" href="#"><img class="social-nav__icon" src="images/instagram.svg" alt="Instagram icon linking to Huddle Instagram page"></a>
-                  </li>
-               </ul>
-            </nav>
+            <ul class="social-media" role="list">
+               <li class="social-media__item" role="listitem">
+                  <a class="social-media__link" href="#">
+                     <img class="social-media__icon" src="images/facebook.svg" alt="Facebook">
+                  </a>
+               </li>
+               <li class="social-media__item" role="listitem">
+                  <a class="social-media__link" href="#">
+                     <img class="social-media__icon" src="images/twitter.svg" alt="Twitter">
+                  </a>
+               </li>
+               <li class="social-media__item" role="listitem">
+                  <a class="social-media__link" href="#">
+                     <img class="social-media__icon" src="images/instagram.svg" alt="Instagram">
+                  </a>
+               </li>
+            </ul>
          </div>
          <div class="footer-bottom">
             <p class="footer-bottom__attribution">
