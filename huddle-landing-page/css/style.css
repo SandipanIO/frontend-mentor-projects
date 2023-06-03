@@ -207,11 +207,13 @@ body {
    .hero-section {
       grid-template-columns: 100%;
       grid-template-rows: auto auto;
+      justify-items: center;
       gap: calc(80rem / 16);
       padding: 0 calc(50rem / 16);
    }
 
    .hero-section__content {
+      max-width: calc(550rem / 16);
       text-align: center;
    }
 }
