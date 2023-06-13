@@ -2,7 +2,7 @@
 
 This is a solution to the [FAQ accordion card challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) on Frontend Mentor.
 
-Check out the live preview here: [Demo](https://sandipan-huddle-landing-page.netlify.app/)
+Check out the live preview here: [Demo](https://sandipan-faq-accordion-card.netlify.app/)
 
 ## Table of contents
 
