@@ -20,7 +20,7 @@ This FAQ Accordion Card has been built using HTML and CSS. I have used BEM (Bloc
 
 **Desktop version:**
 
-![Desktop Version of FAQ Accordion Card](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/huddle-landing-page/screenshots/faq-accordion-card-desktop-version.png)
+![Desktop Version of FAQ Accordion Card](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/faq-accordion-card/screenshots/faq-accordion-card-desktop-version.png)
 
 ## Links
 
