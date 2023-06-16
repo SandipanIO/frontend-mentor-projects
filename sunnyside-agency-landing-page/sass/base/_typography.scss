@@ -1,0 +1,18 @@
+/* --------------------------------------------------------------------------- */
+/* Typography */
+/* --------------------------------------------------------------------------- */
+
+.heading-1,
+.heading-2 {
+   font-family: var(--ff-secondary);
+}
+
+.heading-1 {
+   font-size: var(--fs-heading-1);
+   font-weight: 900;
+}
+
+.heading-2 {
+   font-size: var(--fs-heading-2);
+   font-weight: 700;
+}

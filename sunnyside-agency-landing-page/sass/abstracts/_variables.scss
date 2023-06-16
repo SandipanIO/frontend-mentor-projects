@@ -1,0 +1,53 @@
+/* --------------------------------------------------------------------------- */
+/* CSS Custom Properties */
+/* --------------------------------------------------------------------------- */
+
+:root {
+   /* Colors */
+   --color-primary: rgb(90, 99, 108);
+
+   --color-blue-800: rgb(35, 48, 62);
+   --color-blue-300: rgb(129, 132, 152);
+   --color-blue-100: rgb(167, 171, 174);
+
+   --color-soft-red: rgb(254, 120, 103);
+   --color-yellow: rgb(250, 212, 0);
+
+   --color-cyan-900: rgb(25, 83, 107);
+   --color-cyan-600: rgb(37, 86, 75);
+   --color-cyan-300: rgb(69, 140, 126);
+
+   --color-white: rgb(255, 255, 255);
+
+   /* Font Family */
+   --ff-primary: 'Barlow', sans-serif;
+   --ff-secondary: 'Fraunces', sans-serif;
+
+   /* Font Sizes */
+   --fs-13: 0.8125rem;
+   --fs-16: 1rem;
+   --fs-18: 1.125rem;
+   --fs-20: 1.25rem;
+   --fs-22: 1.375rem;
+   --fs-25: 1.5625rem;
+   --fs-30: 1.875rem;
+   --fs-40: 2.5rem;
+
+   /* Setting font sizes for mobile screens */
+   --fs-body: var(--fs-16);
+   --fs-heading-1: var(--fs-30);
+   --fs-heading-2: var(--fs-25);
+   --fs-heading-3: var(--fs-20);
+   --fs-nav: var(--fs-16);
+   --fs-btn: var(--fs-13);
+}
+
+/* Setting font sizes for desktops */
+@media (min-width: 50em) {
+   :root {
+      --fs-body: var(--fs-18);
+      --fs-heading-1: var(--fs-40);
+      --fs-heading-2: var(--fs-30);
+      --fs-heading-3: var(--fs-22);
+   }
+}

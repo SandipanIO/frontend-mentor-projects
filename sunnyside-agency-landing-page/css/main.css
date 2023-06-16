@@ -1,0 +1,143 @@
+/* --------------------------------------------------------------------------- */
+/* CSS Custom Properties */
+/* --------------------------------------------------------------------------- */
+:root {
+  /* Colors */
+  --color-primary: rgb(90, 99, 108);
+  --color-blue-800: rgb(35, 48, 62);
+  --color-blue-300: rgb(129, 132, 152);
+  --color-blue-100: rgb(167, 171, 174);
+  --color-soft-red: rgb(254, 120, 103);
+  --color-yellow: rgb(250, 212, 0);
+  --color-cyan-900: rgb(25, 83, 107);
+  --color-cyan-600: rgb(37, 86, 75);
+  --color-cyan-300: rgb(69, 140, 126);
+  --color-white: rgb(255, 255, 255);
+  /* Font Family */
+  --ff-primary: "Barlow", sans-serif;
+  --ff-secondary: "Fraunces", sans-serif;
+  /* Font Sizes */
+  --fs-13: 0.8125rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-25: 1.5625rem;
+  --fs-30: 1.875rem;
+  --fs-40: 2.5rem;
+  /* Setting font sizes for mobile screens */
+  --fs-body: var(--fs-16);
+  --fs-heading-1: var(--fs-30);
+  --fs-heading-2: var(--fs-25);
+  --fs-heading-3: var(--fs-20);
+  --fs-nav: var(--fs-16);
+  --fs-btn: var(--fs-13);
+}
+
+/* Setting font sizes for desktops */
+@media (min-width: 50em) {
+  :root {
+    --fs-body: var(--fs-18);
+    --fs-heading-1: var(--fs-40);
+    --fs-heading-2: var(--fs-30);
+    --fs-heading-3: var(--fs-22);
+  }
+}
+/* --------------------------------------------------------------------------- */
+/* CSS Reset */
+/* --------------------------------------------------------------------------- */
+/* Box sizing rules */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+figure,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* --------------------------------------------------------------------------- */
+/* Ultility Classes */
+/* --------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------- */
+/* Body */
+/* --------------------------------------------------------------------------- */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------- */
+/* Typography */
+/* --------------------------------------------------------------------------- */
+.heading-1,
+.heading-2 {
+  font-family: var(--ff-secondary);
+}
+
+.heading-1 {
+  font-size: var(--fs-heading-1);
+  font-weight: 900;
+}
+
+.heading-2 {
+  font-size: var(--fs-heading-2);
+  font-weight: 700;
+}
