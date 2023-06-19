@@ -1,0 +1,123 @@
+/* --------------------------------------------------------------------------- */
+/* Main Navigation */
+/* --------------------------------------------------------------------------- */
+
+.main-nav {
+
+   &__mobile-menu {
+      display: none;
+   }
+   
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 2.5em;
+   }
+
+   &__link {
+      color: var(--color-white);
+      text-decoration: none;
+      padding-block: 0.2em;
+      border-bottom: 0;
+
+      &:hover {
+         border-bottom: 2px solid var(--color-white);
+      }
+   }
+}
+
+/* Mobile Menu */
+@media (max-width: 50em) {
+
+   .main-nav {
+
+      &__mobile-menu {
+         display: block;
+         background-color: transparent;
+         border: 0;
+      }
+
+      &__line1,
+      &__line2,
+      &__line3 {
+         display: block;
+         background-color: var(--color-white);
+         width: 30px;
+         height: 4px;
+         margin-block: 5px;
+         transition: all 0.3s;
+      }
+
+      &__cross1 { transform: translate(0, 7px) rotate(-45deg); }
+
+      &__cross2 { opacity: 0; }
+
+      &__cross3 { transform: translate(0, -11px) rotate(45deg); }
+      
+      &__list {
+         position: absolute;
+         top: 20%;
+         left: 50%;
+         transform: translateX(-50%);
+         width: calc(100% - 3em);
+         flex-direction: column;
+         gap: 2em;
+         padding: 3em 1em;
+         background-color: var(--color-white);
+         font-size: var(--fs-20);
+         transition: all 0.3s ease-out;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            right: 0;
+            border-top: 24px solid transparent;
+            border-right: 24px solid var(--color-white);
+         }
+
+         &[data-visible="false"] {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+         }
+
+         &[data-visible="true"] {
+            display: flex;
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+         }
+      }
+
+      &__link {
+         color: var(--color-blue-300);
+      }
+   }
+}
+
+/* --------------------------------------------------------------------------- */
+/* Footer Navigation */
+/* --------------------------------------------------------------------------- */
+
+.footer-nav {
+   margin-top: 2.2em;
+   margin-bottom: 4em;
+
+   &__list {
+      display: flex;
+      gap: 3.2em;
+   }
+
+   &__link:link,
+   &__link:visited {
+      color: var(--color-cyan-400);
+      text-decoration: none;
+      transition: all 0.3s;
+   }
+
+   &__link:hover,
+   &__link:active {
+      color: var(--color-white);
+   }
+}

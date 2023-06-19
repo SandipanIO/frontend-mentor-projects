@@ -3,6 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Sandipan Mukherjee">
+   <meta name="description" content="This is a landing page for Sunnyside agency.">
 
    <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,57 +12,244 @@
    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
 
    <!-- Main Stylesheet-->
-   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/style.css">
 
    <title>Sunnyside Agency Landing Page</title>
 </head>
 <body>
+   <!-- Skip to main content -->
+   <a class="skip-to-main-content" href="#main">Skip to main content</a>
    
+   <!-- Header -->
+   <header class="header">
+      <div class="container">
+         <div class="header__wrapper">
+            <a href="#">
+               <img class="logo" src="images/logo.svg" alt="Sunnyside">
+            </a>
+            <nav class="main-nav" aria-label="Primary">
+               <button id="mobile-menu" class="main-nav__mobile-menu" aria-label="Menu" aria-controls="primary-navigation" aria-expanded="false">
+                  <span class="main-nav__line1"></span>
+                  <span class="main-nav__line2"></span>
+                  <span class="main-nav__line3"></span>
+               </button>
+               <ul id="primary-navigation" class="main-nav__list" role="list" data-visible="false">
+                  <li role="listitem">
+                     <a href="#about" class="main-nav__link">About</a>
+                  </li>
+                  <li role="listitem">
+                     <a href="#services" class="main-nav__link">Services</a>
+                  </li>
+                  <li role="listitem">
+                     <a href="#projects" class="main-nav__link">Projects</a>
+                  </li>
+                  <li role="listitem">
+                     <a href="#" class="btn">Contact</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </header>
 
-   About
-   Services
-   Projects
-   Contact
+   <!-- Main -->
+   <main id="main" class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+         <h1 class="heading-1 hero__heading">
+            We are creatives
+         </h1>
+         <img class="hero__icon" src="images/icon-arrow-down.svg" alt="">
+      </section>
 
-   We are creatives
+      <!-- About Section -->
+      <section id="about" class="about" aria-label="About">
+         <div class="columns">
+            <picture class="about__image-box">
+               <source media="(min-width: 46em)" srcset="images/desktop/image-transform.jpg">
+               <img class="about__image" src="images/mobile/image-transform.jpg" alt="">
+            </picture>
+            <div class="about__content-box about__content-box--left">
+               <h2 class="heading-2 about__heading">
+                  Transform your brand
+               </h2>
+               <p class="about__text">
+                  We are a full-service creative agency specializing in helping brands grow fast. 
+                  Engage your clients through compelling visuals that do most of the marketing for you.
+               </p>
+               <a href="#" class="about__link about__link--yellow">Learn more</a>
+            </div>
+         </div>
+         <div class="columns">
+            <picture class="about__image-box">
+               <source media="(min-width: 46em)" srcset="images/desktop/image-stand-out.jpg">
+               <img class="about__image" src="images/mobile/image-stand-out.jpg" alt="">
+            </picture>
+            <div class="about__content-box">
+               <h2 class="heading-2 about__heading">
+                  Stand out to the right audience
+               </h2>
+               <p class="about__text">
+                  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+               </p>
+               <a href="#" class="about__link about__link--red">Learn more</a>
+            </div>
+         </div>
+      </section>
 
-   Transform your brand
+      <!-- Services Section -->
+      <section id="services" class="services" aria-label="Services">
+         <div class="columns">
+            <div class="services__box">
+               <picture>
+                  <source media="(min-width: 46em)" srcset="images/desktop/image-graphic-design.jpg">
+                  <img class="services__image" src="images/mobile/image-graphic-design.jpg" alt="">
+               </picture>
+               <div class="services__content-box services__content-box--green">
+                  <h2 class="heading-2 services__heading">
+                     Graphic design
+                  </h2>
+                  <p class="services__text">
+                     Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients&apos; attention.
+                  </p>
+               </div>
+            </div>
+            <div class="services__box">
+               <picture>
+                  <source media="(min-width: 46em)" srcset="images/desktop/image-photography.jpg">
+                  <img class="services__image" src="images/mobile/image-photography.jpg" alt="">
+               </picture>
+               <div class="services__content-box services__content-box--blue">
+                  <h2 class="heading-2 services__heading">
+                     Photography
+                  </h2>
+                  <p class="services__text">
+                     Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
 
-   We are a full-service creative agency specializing in helping brands grow fast. 
-   Engage your clients through compelling visuals that do most of the marketing for you.
+      <!-- Testimonial Section -->
+      <section class="testimonial" aria-labelledby="testimonial-heading">
+         <div class="container">
+            <h3 id="testimonial-heading" class="heading-3 testimonial__heading">
+               Client testimonials
+            </h3>
+            <div class="testimonial__box">
+               <div class="testimonial__content">
+                  <img class="testimonial__image" src="images/image-emily.jpg" alt="Photo of Emily">
+                  <p class="testimonial__text">
+                     We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+                  </p>
+                  <p class="testimonial__name">
+                     Emily R.
+                  </p>
+                  <p class="testimonial__designation">
+                     Marketing Director
+                  </p>
+               </div>
+               <div class="testimonial__content">
+                  <img class="testimonial__image" src="images/image-thomas.jpg" alt="Photo of Thomas">
+                  <p class="testimonial__text">
+                     Sunnyside&apos;s enthusiasm coupled with their keen interest in our brand&apos;s success made it a satisfying and enjoyable experience.
+                  </p>
+                  <p class="testimonial__name">
+                     Thomas S.
+                  </p>
+                  <p class="testimonial__designation">
+                     Chief Operating Officer
+                  </p>
+               </div>
+               <div class="testimonial__content">
+                  <img class="testimonial__image" src="images/image-jennie.jpg" alt="Photo of Jennie">
+                  <p class="testimonial__text">
+                     Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+                  </p>
+                  <p class="testimonial__name">
+                     Jennie F.
+                  </p>
+                  <p class="testimonial__designation">
+                     Business Owner
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
 
-   Learn more
+      <!-- Projects Section -->
+      <section id="projects" class="projects" aria-label="Projects">
+         <picture class="projects__image-box">
+            <source media="(min-width: 46em)" srcset="images/desktop/image-gallery-milkbottles.jpg">
+            <img class="projects__image" src="images/mobile/image-gallery-milkbottles.jpg" alt="A photo of milk bottles">
+         </picture>
+         <picture class="projects__image-box">
+            <source media="(min-width: 46em)" srcset="images/desktop/image-gallery-orange.jpg">
+            <img class="projects__image" src="images/mobile/image-gallery-orange.jpg" alt="a half cut orange in a plate">
+         </picture>
+         <picture class="projects__image-box">
+            <source media="(min-width: 46em)" srcset="images/desktop/image-gallery-cone.jpg">
+            <img class="projects__image" src="images/mobile/image-gallery-cone.jpg" alt="an empty ice-cream cone">
+         </picture>
+         <picture class="projects__image-box">
+            <source media="(min-width: 46em)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
+            <img class="projects__image" src="images/mobile/image-gallery-sugar-cubes.jpg" alt="A picture of multiple sugar cubes">
+         </picture>
+      </section>
+   </main>
 
-   Stand out to the right audience
-
-   Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
-
-   Learn more
-
-   Graphic design
-   Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
-
-   Photography
-   Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
-
-   Client testimonials
-
-   We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-   Emily R.
-   Marketing Director
-
-   Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-   Thomas S.
-   Chief Operating Officer
-
-   Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-   Jennie F.
-   Business Owner
-
-   About
-   Services
-   Projects
-   Contact
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__top">
+            <a href="#">
+               <img class="logo" src="images/logo-green.svg" alt="Sunnyside">
+            </a>
+            <nav class="footer-nav" aria-label="Footer">
+               <ul class="footer-nav__list" role="list">
+                  <li role="listitem">
+                     <a href="#about" class="footer-nav__link">About</a>
+                  </li>
+                  <li role="listitem">
+                     <a href="#services" class="footer-nav__link">Services</a>
+                  </li>
+                  <li role="listitem">
+                     <a href="#projects" class="footer-nav__link">Projects</a>
+                  </li>
+               </ul>
+            </nav>
+            <ul class="social-links" role="list" aria-label="Social Media Links">
+               <li class="social-links__item" role="listitem">
+                  <a href="#" class="social-links__link">
+                     <img src="images/icon-facebook.svg" alt="Facebook">
+                  </a>
+               </li>
+               <li class="social-links__item" role="listitem">
+                  <a href="#" class="social-links__link">
+                     <img src="images/icon-instagram.svg" alt="Instagram">
+                  </a>
+               </li>
+               <li class="social-links__item" role="listitem">
+                  <a href="#" class="social-links__link">
+                     <img src="images/icon-twitter.svg" alt="Twitter">
+                  </a>
+               </li>
+               <li class="social-links__item" role="listitem">
+                  <a href="#" class="social-links__link">
+                     <img src="images/icon-pinterest.svg" alt="Pinterest">
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer__bottom">
+         <p>
+            Challenge by <a class="footer-link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> &#124; Coded by <a class="footer-link" href="https://github.com/SandipanIO" target="_blank">Sandipan Mukherjee</a>
+         </p>
+      </div>
+   </footer>
+   
    <script src="js/script.js"></script>
 </body>
 </html>

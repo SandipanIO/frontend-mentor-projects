@@ -1,0 +1,19 @@
+/* --------------------------------------------------------------------------- */
+/* Header */
+/* --------------------------------------------------------------------------- */
+
+.header {
+   background-color: var(--color-header);
+   padding-block: 2.5em;
+   min-height: 20vh;
+
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.logo {
+   width: clamp(calc(150rem / 16), 25vw, calc(170rem / 16));
+}

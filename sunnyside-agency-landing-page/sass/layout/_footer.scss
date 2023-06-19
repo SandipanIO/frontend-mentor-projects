@@ -1,0 +1,34 @@
+/* --------------------------------------------------------------------------- */
+/* Footer */
+/* --------------------------------------------------------------------------- */
+
+.footer {
+   background-color: var(--color-cyan-100);
+
+   &__top {
+      display: grid;
+      place-items: center;
+      padding-block: 4em;
+   }
+
+   &__bottom {
+      background-color: var(--color-cyan-600);
+      color: var(--color-cyan-100);
+      font-size: var(--fs-15);
+      text-align: center;
+      padding: 1em 1.5em;
+   }
+}
+
+.footer-link {
+   &:link,
+   &:visited {
+      color: var(--color-cyan-100);
+      text-decoration: underline;
+   }
+
+   &:hover,
+   &:active {
+      text-decoration: none;
+   }
+}
