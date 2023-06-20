@@ -422,7 +422,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7em;
+  gap: 5em;
 }
 .hero__heading {
   color: var(--color-white);
@@ -434,13 +434,19 @@ body {
 @media (min-width: 46em) {
   .hero {
     background-image: url(../images/desktop/image-header.jpg);
-    gap: 5em;
   }
 }
-@media (min-width: 86em) {
+/* For Mobiles */
+@media (min-height: 49em) and (orientation: portrait) {
   .hero {
-    background-image: url(../images/desktop/image-header.jpg);
-    gap: 7em;
+    justify-content: space-around;
+    gap: 6em;
+  }
+}
+/* For Desktop screens 1400px and above */
+@media (min-height: 49em) and (orientation: landscape) {
+  .hero {
+    gap: 10em;
   }
 }
 /* --------------------------------------------------------------------------- */
