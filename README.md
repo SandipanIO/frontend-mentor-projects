@@ -6,3 +6,4 @@
 4. Stats Preview Card Component - https://sandipan-stats-card-component.netlify.app/
 5. Huddle Landing Page - https://sandipan-huddle-landing-page.netlify.app/
 6. FAQ Accordion Card - https://sandipan-faq-accordion-card.netlify.app/
+7. Sunnyside Agency Landing Page - https://sandipan-sunnyside-agency.netlify.app/
