@@ -20,7 +20,7 @@ html {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
    scroll-behavior: smooth;
 }
 
@@ -52,6 +52,15 @@ ul[role='list'],
 ol[role='list'] {
    list-style: none;
 }
+
+/* Added to body. This makes transitions only after page load. Later removed using JS */
+.preload * {
+   -webkit-transition: none !important;
+   -moz-transition: none !important;
+   -ms-transition: none !important;
+   -o-transition: none !important;
+   transition: none !important;
+ }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {

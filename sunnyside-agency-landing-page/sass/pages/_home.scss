@@ -12,17 +12,20 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-around;
+   gap: 7em;
 
    &__heading {
       color: var(--color-white);
       text-align: center;
+      margin-top: 1.5em;
+      padding-inline: 0.5em;
    }
 }
 
 @media (min-width: 46em) {
    .hero {
       background-image: url(../images/desktop/image-header.jpg);
+      gap: 5em;
    }
 }
 
@@ -37,9 +40,10 @@
    }
    
    &__content-box {
+      text-align: center;
       width: min((100% - 2em), calc(500rem / 16));
       margin-inline: auto;
-      text-align: center;
+      margin-block: 2em;
       align-self: center;
    }
 
@@ -87,6 +91,15 @@
          &::after { background-color: var(--color-soft-red-400); }
 
          &:hover::after { background-color: var(--color-soft-red); }
+      }
+   }
+}
+
+@media (min-width: 22em) {
+   .about {
+
+      &__text {
+         margin-block: 1.4em;
       }
    }
 }
@@ -148,7 +161,7 @@
    }
 }
 
-@media (min-width: 23em) and (max-width: 46em) {
+@media (min-width: 22em) and (max-width: 46em) {
    .services {
 
       &__content-box {
@@ -215,11 +228,6 @@
 
    &__text {
       margin-block: 1.8em;
-   }
-
-   &__text,
-   &__name {
-      font-size: var(--fs-18);
    }
 
    &__name {

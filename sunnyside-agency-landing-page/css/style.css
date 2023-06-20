@@ -33,7 +33,6 @@
   --fs-22: 1.375rem;
   --fs-25: 1.5625rem;
   --fs-30: 1.875rem;
-  --fs-35: 2.1875rem;
   --fs-40: 2.5rem;
   --fs-50: 3.125rem;
   /* Setting font sizes for screen sizes 320px and above */
@@ -41,12 +40,12 @@
   --fs-heading-1: var(--fs-40);
   --fs-heading-2: var(--fs-25);
   --fs-heading-3: var(--fs-20);
-  --fs-nav: var(--fs-16);
-  --fs-btn: var(--fs-13);
+  --fs-nav: var(--fs-18);
+  --fs-btn: var(--fs-15);
 }
 
 /* Setting font sizes for screen sizes 375px and above */
-@media (min-width: 23em) {
+@media (min-width: 22em) {
   :root {
     --fs-body: var(--fs-16);
     --fs-heading-2: var(--fs-30);
@@ -86,7 +85,7 @@ html {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -117,6 +116,15 @@ select {
 ul[role=list],
 ol[role=list] {
   list-style: none;
+}
+
+/* Added to body. This makes transitions only after page load. Later removed using JS */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -222,16 +230,13 @@ body {
   display: inline-block;
   background-color: var(--color-yellow);
   color: var(--color-blue-800);
-  font-size: var(--fs-16);
+  font-size: var(--fs-btn);
   font-family: var(--ff-secondary);
   text-transform: uppercase;
   text-decoration: none;
   padding: 1em 2.5em;
   border-radius: 10em;
   transition: all 0.3s;
-}
-.btn:hover {
-  background-color: var(--color-yellow-400);
 }
 
 @media (min-width: 50em) {
@@ -277,6 +282,7 @@ body {
   display: none;
 }
 .main-nav__list {
+  font-size: var(--fs-nav);
   display: flex;
   align-items: center;
   gap: 2.5em;
@@ -297,6 +303,7 @@ body {
     display: block;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
   }
   .main-nav__line1, .main-nav__line2, .main-nav__line3 {
     display: block;
@@ -325,7 +332,6 @@ body {
     gap: 2em;
     padding: 3em 1em;
     background-color: var(--color-white);
-    font-size: var(--fs-20);
     transition: all 0.3s ease-out;
   }
   .main-nav__list::before {
@@ -349,6 +355,11 @@ body {
   }
   .main-nav__link {
     color: var(--color-blue-300);
+  }
+}
+@media (orientation: landscape) and (max-width: 50em) {
+  .main-nav__list {
+    top: 35%;
   }
 }
 /* --------------------------------------------------------------------------- */
@@ -411,16 +422,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 7em;
 }
 .hero__heading {
   color: var(--color-white);
   text-align: center;
+  margin-top: 1.5em;
+  padding-inline: 0.5em;
 }
 
 @media (min-width: 46em) {
   .hero {
     background-image: url(../images/desktop/image-header.jpg);
+    gap: 5em;
   }
 }
 /* --------------------------------------------------------------------------- */
@@ -430,9 +444,10 @@ body {
   object-fit: cover;
 }
 .about__content-box {
+  text-align: center;
   width: min(100% - 2em, 31.25rem);
   margin-inline: auto;
-  text-align: center;
+  margin-block: 2em;
   align-self: center;
 }
 .about__heading {
@@ -477,6 +492,11 @@ body {
   background-color: var(--color-soft-red);
 }
 
+@media (min-width: 22em) {
+  .about__text {
+    margin-block: 1.4em;
+  }
+}
 @media (min-width: 46em) {
   .about__content-box {
     text-align: left;
@@ -517,7 +537,7 @@ body {
   margin-bottom: 0.8em;
 }
 
-@media (min-width: 23em) and (max-width: 46em) {
+@media (min-width: 22em) and (max-width: 46em) {
   .services__content-box {
     bottom: 15%;
   }
@@ -565,9 +585,6 @@ body {
 }
 .testimonial__text {
   margin-block: 1.8em;
-}
-.testimonial__text, .testimonial__name {
-  font-size: var(--fs-18);
 }
 .testimonial__name {
   color: var(--color-blue-800);

@@ -42,7 +42,6 @@
    --fs-22: 1.375rem;
    --fs-25: 1.5625rem;
    --fs-30: 1.875rem;
-   --fs-35: 2.1875rem;
    --fs-40: 2.5rem;
    --fs-50: 3.125rem;
 
@@ -51,12 +50,12 @@
    --fs-heading-1: var(--fs-40);
    --fs-heading-2: var(--fs-25);
    --fs-heading-3: var(--fs-20);
-   --fs-nav: var(--fs-16);
-   --fs-btn: var(--fs-13);
+   --fs-nav: var(--fs-18);
+   --fs-btn: var(--fs-15);
 }
 
 /* Setting font sizes for screen sizes 375px and above */
-@media (min-width: 23em) {
+@media (min-width: 22em) {
    :root {
       --fs-body: var(--fs-16);
       --fs-heading-2: var(--fs-30);
