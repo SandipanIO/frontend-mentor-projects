@@ -28,11 +28,11 @@
    }
 }
 
-/* For Mobiles */ 
-@media (min-height: 49em) and (orientation: portrait) {
+/* For Mobiles with screen height of 736px and above */ 
+@media (min-height: 45em) and (orientation: portrait) {
    .hero {
       justify-content: space-around;
-      gap: 6em;
+      gap: 8em;
    }
 }
 
