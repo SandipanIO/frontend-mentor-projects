@@ -477,6 +477,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 0.5em;
   z-index: 1;
   position: relative;
 }
@@ -516,6 +517,9 @@ body {
   }
   .about__content-box--left {
     grid-column: 1/2;
+  }
+  .about__link {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 46em) and (max-width: 60em) {
