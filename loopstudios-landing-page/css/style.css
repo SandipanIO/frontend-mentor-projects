@@ -132,6 +132,10 @@ ol[role=list] {
  /* Ultility Classes */
  /* --------------------------------------------------------------------------- */
  
+ .body__overflow-hidden {
+   overflow: hidden;
+ }
+
 .container {
    width: min(var(--max-width), 100% - 4em);
    margin-inline: auto;
@@ -254,6 +258,7 @@ body {
       grid-template-columns: 100%;
       grid-template-rows: calc(50rem / 16) auto;
       padding-block: 2em;
+      overflow-y: auto;
    }
 
    .logo {
@@ -286,6 +291,7 @@ body {
 @media (max-width: 46em) {
    .main-nav {
       justify-self: unset;
+      margin-top: -2em;
    }
 
    .main-nav__list {
@@ -337,7 +343,7 @@ body {
 }
 
 .hero__content-box {
-   margin-top: calc(100rem / 16);
+   margin-top: calc(50rem / 16);
    max-width: calc(600rem / 16);
    padding: 2em 1em;
    border: 2px solid var(--color-white);

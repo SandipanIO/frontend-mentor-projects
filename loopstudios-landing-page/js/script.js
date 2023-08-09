@@ -7,6 +7,18 @@ window.addEventListener('load', ()=> {
 });
 
 /* --------------------------------------------------------------------------- */
+/* Add/Remove Overflow to(or from) Body */
+/* --------------------------------------------------------------------------- */
+
+const bodyOverflowHidden = () => {
+   document.querySelector('body').classList.add('body__overflow-hidden');
+}
+
+const bodyOverflowVisible = () => {
+   document.querySelector('body').classList.remove('body__overflow-hidden');
+}
+
+/* --------------------------------------------------------------------------- */
 /* Mobile Menu */
 /* --------------------------------------------------------------------------- */
 
@@ -25,10 +37,14 @@ window.addEventListener('resize', () => {
       btnMenu.style.display = 'none';
       btnClose.style.display = 'none';
       mainNavList.style.display = 'flex';
+
+      bodyOverflowVisible();
    
-   } else {
+   } else if(window.innerWidth < 736) {
+      
       btnMenu.style.display = 'block';
       mainNavList.style.display = 'none';
+
    }
 });
 
@@ -41,6 +57,8 @@ mainNav.addEventListener('click', e => {
       btnClose.style.display = 'block';
       mainNavList.style.display = 'flex';
 
+      bodyOverflowHidden();
+
    }
 
    if(e.target.id === 'btn-close' || e.target.id === 'close-icon') {
@@ -49,6 +67,8 @@ mainNav.addEventListener('click', e => {
       btnMenu.style.display = 'block';
       btnClose.style.display = 'none';
       mainNavList.style.display = 'none';
+
+      bodyOverflowVisible();
 
    }
 });
