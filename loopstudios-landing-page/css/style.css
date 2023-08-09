@@ -11,6 +11,8 @@
    --color-dark-gray: hsl(0, 0%, 55%);
    --color-very-dark-gray: hsl(0, 0%, 41%);
 
+   --color-bg-color: rgb(216, 65, 198);
+
    /* Max Width */
    --max-width: calc(1115rem / 16);
 
@@ -316,6 +318,7 @@ body {
 
 .hero {
    min-height: 100vh;
+   background-color: var(--color-bg-color);
    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
                      url(../images/mobile/image-hero.jpg);
    background-position: center;
