@@ -317,7 +317,7 @@ body {
 .hero {
    min-height: 100vh;
    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-                     url(/images/mobile/image-hero.jpg);
+                     url(../images/mobile/image-hero.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -346,7 +346,7 @@ body {
 @media (min-width: 46em) {
    .hero {
       background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-                        url(/images/desktop/image-hero.jpg);
+                        url(../images/desktop/image-hero.jpg);
    }
 
    .hero__content-box {
