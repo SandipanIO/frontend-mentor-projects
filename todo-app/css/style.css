@@ -1,0 +1,265 @@
+:root {
+   --color-background: #fff;
+   --color-text: #333;
+   --color-container: #fff;
+   --color-btn-submit: hsl(235, 24%, 19%);
+   --color-btn-submit-text: #fff;
+   --color-border: #ececec;
+
+   --image-toggle-btn: url(../images/icon-sun.svg);
+   --image-background: url(../images/bg-desktop-light.jpg);
+}
+
+@media (max-width: 46em) {
+   :root{
+      --image-background: url(../images/bg-mobile-light.jpg);
+   }
+}
+
+.dark-mode {
+   --color-background: hsl(235, 21%, 11%);
+   --color-text: hsl(234, 39%, 85%);
+   --color-container: hsl(235, 24%, 19%);
+   --color-btn-submit: #fff;
+   --color-btn-submit-text: #333;
+
+   --image-toggle-btn: url(../images/icon-moon.svg);
+   --image-background: url(../images/bg-desktop-dark.jpg);
+}
+
+@media (max-width: 46em) {
+   .dark-mode{
+      --image-background: url(../images/bg-mobile-dark.jpg);
+   }
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+input,
+button {
+   font: inherit;
+}
+
+img,
+svg {
+   max-width: 100%;
+   display: block;
+}
+
+html {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: calc(18rem / 16);
+   background-color: var(--color-background);
+   color: var(--color-text);
+}
+
+.sr-only {
+   border-width: 0 !important;
+   clip: rect(1px, 1px, 1px, 1px) !important;
+   height: 1px !important;
+   overflow: hidden !important;
+   padding: 0 !important;
+   position: absolute !important;
+   white-space: nowrap !important;
+   width: 1px !important;
+ }
+
+
+.main {
+   min-height: 100vh;
+   overflow-x: hidden;
+   position: relative;
+}
+
+.image-box {
+   display: block;
+   max-width: 100%;
+   min-height: 45vh;
+   background-image: var(--image-background);
+   background-size: cover;
+}
+
+.todo {
+   position: absolute;
+   top: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   max-width: calc(450rem / 16);
+}
+
+.todo__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.toggle-image {
+   display: block;
+   width: calc(26rem / 16);
+   height: calc(26rem / 16);
+   background-image: var(--image-toggle-btn);
+}
+
+.todo__heading {
+   font-size: 2.2rem;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   color: #fff;
+   margin-block: 1em;
+}
+
+.todo__form {
+   position: relative;
+}
+
+.todo__new-todo {
+   display: block;
+   font-size: 1rem;
+   background-color: var(--color-container);
+   padding: 1em;
+   width: 100%;
+   border: 0;
+   border-radius: 0.2em;
+   outline: none;
+}
+
+.todo__new-todo:focus {
+   outline: 2px solid black;
+}
+
+.todo__btn-submit {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: transparent;
+   border: none;
+   display: block;
+   font-size: 0.9rem;
+   color: var(--color-btn-submit-text);
+   background-color: var(--color-btn-submit);
+   height: 100%;
+   padding: 1em;
+   border-top-right-radius: 0.2em;
+   border-bottom-right-radius: 0.2em;
+   cursor: pointer;
+}
+
+.todo__container {
+   background-color: var(--color-container);
+   width: 100%;
+   margin-block: 2.5em;
+   border-radius: 0.2em;
+   box-shadow: 0 0 10px rgba(0,0,0, 0.15);
+}
+
+.todo__list {
+   list-style: none;
+   font-size: 1rem;
+}
+
+.todo__item {
+   border-bottom: 1px solid var(--color-border);
+   cursor: move;
+}
+
+.todo__item-box {
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   align-items: center;
+   gap: 1em;
+   padding: 1em;
+}
+
+.dragging {
+   background-color: #ececec;
+   border: 1px dashed #333;
+   opacity: .5;
+ }
+
+.todo__label {
+   display: block;
+   line-height: 0.5;
+   width: 25px;
+   height: 25px;
+   position: relative;
+}
+
+.todo__input {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -o-appearance: none;
+   appearance: none;
+}
+
+.todo__mark-as-complete {
+   position: absolute;
+   inset: 0;
+   border: 1px solid #e3e3e3;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.todo__input:checked + .todo__mark-as-complete {
+   background: url(../images/icon-check.svg),
+               linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.line-through {
+   text-decoration: line-through;
+}
+
+.todo__btn {
+   background-color: transparent;
+   color: var(--color-text);
+   border: none;
+   cursor: pointer;
+}
+
+.todo__delete {
+   line-height: 0.5;
+   width: 15px;
+   height: 15px;
+}
+
+.todo__footer {
+   font-size: calc(13rem / 16);
+   padding: 1em;
+   justify-content: space-between;
+   gap: 1em;
+   display: none;
+}
+
+.show-footer {
+   display: flex;
+}
+
+.todo__filter {
+   list-style: none;
+   display: flex;
+   gap: 0.5em;
+}
+
+.selected-button {
+   color: hsl(220, 98%, 61%);
+   font-weight: 700;
+}
+
+.hide {
+   display: none;
+}

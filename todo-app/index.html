@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Sandipan Mukherjee">
+   <meta name="description" content="This is a Todo App built using Vanilla JavaScript.">
+
+   <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+   <!-- Main Stylesheet -->
+   <link rel="stylesheet" href="css/style.css">
+   
+   <title>Todo App</title>
+</head>
+<body>
+   <main class="main">
+      <!-- Image Box -->
+      <div class="image-box"></div>
+      
+      <!-- Todo -->
+      <div class="todo">
+         <div class="todo__header">
+            <h1 class="todo__heading">Todo</h1>
+            <button id="toggle-btn" class="todo__btn" aria-label="Change to dark mode">
+               <span class="toggle-image"></span>
+            </button>
+         </div>
+
+
+         <form action="#" id="todo-form" class="todo__form">
+            <label for="new-todo" class="sr-only">Create a new todo</label>
+            <input autocomplete="off" type="text" name="newTodo" id="new-todo" class="todo__new-todo" 
+                     aria-describedby="todo__example" required
+                     placeholder="Create a new todo (e.g. feed the chicken)">
+            <span id="todo__example" class="sr-only">Example: Feed the chicken</span>
+            <button type="submit" class="todo__btn-submit">Add Todo</button>
+         </form>
+
+         <div class="todo__container">
+            <ul id="todo-list" class="todo__list" role="list"></ul>
+
+            <div id="todo-footer" class="todo__footer">
+               <p id="todo-items-left" class="todo__items-left"></p>
+
+               <ul id="todo-filter" class="todo__filter" role="list">
+                  <li role="listitem">
+                     <button id="all" class="todo__btn todo__all selected-button">All</button>
+                  </li>
+                  <li role="listitem">
+                     <button id="active-todos" class="todo__btn todo__active">Active</button>
+                  </li>
+                  <li role="listitem">
+                     <button id="completed-todos" class="todo__btn todo__completed">Completed</button>
+                  </li>
+               </ul>
+
+               <button id="clear-completed" class="todo__btn todo__clear-completed">Clear Completed</button>
+            </div>
+         </div>
+
+         </ul>
+      </div>
+   </main>
+
+   <script src="js/script.js"></script>
+</body>
+</html>
