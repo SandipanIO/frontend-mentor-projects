@@ -237,21 +237,23 @@ body {
 }
 
 .header__wrapper {
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: calc(230rem / 16) auto;
    align-items: center;
    padding-block: 4em;
 }
 
 @media (max-width: 46em) {
-   
-   .header[data-mobile-menu-visible="true"] {
+
+   .header[data-menu-open="true"] {
       background-color: var(--color-black);
-      min-height: 100vh;
    }
 
    .header__wrapper {
-      padding-block: 3em;
+      min-height: 100vh;
+      grid-template-columns: 100%;
+      grid-template-rows: calc(50rem / 16) auto;
+      padding-block: 2em;
    }
 
    .logo {
@@ -263,52 +265,57 @@ body {
 /* Main Navigation */
 /* --------------------------------------------------------------------------- */
 
-.btn__open,
-.btn__close {
-   display: none;
-}
-
-.btn__open,
-.btn__close,
-.btn__icon {
-   cursor: pointer;
+.main-nav {
+   justify-self: end;
 }
 
 .main-nav__list {
    display: flex;
-   gap: 3em;
+   gap: 2em;
 }
 
 .main-nav__link {
    color: var(--color-white);
 }
 
-@media (max-width: 46em) {
-   .btn__open {
-      display: block;
-   }
+.btn__menu,
+.btn__close {
+   display: none;
+}
 
-   .btn__open,
-   .btn__close {
-      z-index: 10;
+@media (max-width: 46em) {
+   .main-nav {
+      justify-self: unset;
    }
 
    .main-nav__list {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 100%;
       flex-direction: column;
-      gap: 2em;
-      padding-inline: 2em;
+      gap: 1.5em;
       display: none;
    }
 
    .main-nav__item {
       font-size: var(--fs-16);
       font-family: var(--ff-secondary);
+      font-weight: 300;
       text-transform: uppercase;
+   }
+
+   .main-nav__link:hover {
+      text-decoration: none;
+   }
+
+   .btn__menu,
+   .btn__close {
+      position: absolute;
+      top: calc(45rem / 16);
+      right: 2em;
+      z-index: 10;
+      cursor: pointer;
+   }
+
+   .btn__menu {
+      display: block;
    }
 }
 
@@ -422,8 +429,8 @@ body {
 .events__grid {
    display: flex;
    flex-wrap: wrap;
-   gap: 2em;
-   margin-block: 4em;
+   gap: 1.25em;
+   margin-block: 2em 3em;
 }
 
 .events__image-box {
@@ -468,6 +475,7 @@ body {
    
    .events__grid {
       grid-area: events-grid;
+      gap: 2em;
       margin-block: 3em 7em;
    }
    
