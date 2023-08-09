@@ -291,7 +291,7 @@ body {
 @media (max-width: 46em) {
    .main-nav {
       justify-self: unset;
-      margin-top: -2em;
+      margin-top: -3em;
    }
 
    .main-nav__list {
@@ -343,7 +343,6 @@ body {
 }
 
 .hero__content-box {
-   margin-top: calc(50rem / 16);
    max-width: calc(600rem / 16);
    padding: 2em 1em;
    border: 2px solid var(--color-white);
