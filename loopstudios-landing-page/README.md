@@ -20,13 +20,12 @@ The Loopstudios Landing Page has been built using HTML, CSS, and JavaScript. I h
 
 **Desktop version:**
 
-![Desktop Version of Sunnyside Agency Landing Page](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/loopstudios-landing-page/screenshots/loopstudios-landing-page.png)
+![Desktop Version of Loopstudios Landing Page](https://github.com/SandipanIO/frontend-mentor-projects/blob/main/loopstudios-landing-page/screenshots/loopstudios-landing-page.png)
 
 ## Links
 
 - Get the code here: [Code](https://github.com/SandipanIO/frontend-mentor-projects/tree/main/loopstudios-landing-page/)
 - Check out the demo: [Demo](https://sandipan-loopstudios.netlify.app/)
-
 
 ## Built with
 
