@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet">
+
+   <!-- Stylesheet -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <title>Advice generator app</title>
+</head>
+<body class="font-manrope leading-6 text-light-cyan">
+   <main class="bg-dark-blue grid place-items-center min-h-screen">
+      <!-- Card -->
+      <div class="bg-dark-grayish-blue max-w-lg px-8 py-10 mx-4 my-4 rounded-xl shadow-sm relative">
+         <h1 class="text-sm tracking-widest text-center uppercase text-neon-green">
+            Advice #<span id="advice-id"></span>
+         </h1>
+         <p id="advice" class="text-2xl leading-10 font-extrabold text-center py-8 
+               before:content-['\201C'] before:inline-block before:text-3xl before:mr-1
+               after:content-['\201D'] after:inline-block after:text-3xl">
+         </p>
+         <picture class="block mb-8">
+            <source media="(min-width: 48em)" srcset="images/pattern-divider-desktop.svg">
+            <img src="images/pattern-divider-mobile.svg" alt="">
+         </picture>
+         <button id="btn" class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-neon-green p-4 rounded-full">
+            <img src="images/icon-dice.svg" alt="">
+         </button>
+      </div>
+   </main>
+
+   <script src="js/script.js"></script>
+</body>
+</html>
