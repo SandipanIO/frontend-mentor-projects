@@ -22,12 +22,6 @@ const updateCard = data => {
    advice.innerHTML = data.advice;
 }
 
-// When the page loads, show an advice
-getAdvice(API_URL)
-   .then(data => updateCard(data))
-   .catch(err => console.log(err));
-
-   
 // When the dice button is clicked, show a new advice
 btn.addEventListener('click', e => {
    
