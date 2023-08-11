@@ -14,7 +14,7 @@ Check out the live preview here: [Demo](https://sandipan-advice-generator.netlif
 
 ## Overview
 
-The Advice generator app has been built using HTML and Tailwind CSS. 
+The Advice generator app has been built using HTML, Tailwind CSS, and JavaScript. It uses the Advice Slip API to generate a new piece of advice when the dice icon is clicked.
 
 ## Screenshot
 
@@ -32,6 +32,7 @@ The Advice generator app has been built using HTML and Tailwind CSS.
 
 - HTML
 - Tailwind CSS
+- JavaScript
 
 ## Author
 
