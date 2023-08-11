@@ -4,6 +4,7 @@ const adviceID = document.querySelector('#advice-id');
 const advice = document.querySelector('#advice');
 const btn = document.querySelector('#btn');
 
+// Async function to fetch data from the Advice Slip API
 const getAdvice = async(resource) => {
    const response = await fetch(resource);
 
@@ -15,16 +16,17 @@ const getAdvice = async(resource) => {
    return data['slip'];
 }
 
-// Function to update data in DOM
+// Function to update DOM
 const updateCard = data => {
 
    adviceID.innerHTML = data.id;
    advice.innerHTML = data.advice;
+
 }
 
 // When the dice button is clicked, show a new advice
 btn.addEventListener('click', e => {
-   
+
    e.preventDefault();
 
    getAdvice(API_URL)
