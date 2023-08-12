@@ -6,31 +6,51 @@ const btn = document.querySelector('#btn');
 
 // Async function to fetch data from the Advice Slip API
 const getAdvice = async(resource) => {
-   const response = await fetch(resource);
 
-   if(response.status !== 200) {
-      throw new Error('Could not fetch data');
+   try {
+      const response = await fetch(resource);
+
+      // Check if the response is not OK (status code is not equal 200)
+      if(!response.ok) {
+         throw new Error('Could not fetch data');
+      }
+
+      // Parse the response as JSON
+      const data = await response.json();
+
+      // Return the advice object
+      return data['slip'];
+
+   } catch (err) { 
+      
+      console.log('Error:', err);
+
    }
-
-   const data = await response.json();
-   return data['slip'];
 }
 
-// Function to update DOM
-const updateCard = data => {
+// When the dice button is clicked, show a new advice (Event Listener)
+btn.addEventListener('click', async(e) => {
 
-   adviceID.innerHTML = data.id;
-   advice.innerHTML = data.advice;
-
-}
-
-// When the dice button is clicked, show a new advice
-btn.addEventListener('click', e => {
-
+   // Prevents the default behaviour of the button
    e.preventDefault();
 
-   getAdvice(API_URL)
-      .then(data => updateCard(data))
-      .catch(err => console.log(err));
+   try {
+
+      // Fetch advice from the API using the getAdvice function
+      const data = await getAdvice(API_URL);
+
+      if(data) {
+
+         // Update DOM with fetched data
+         adviceID.innerHTML = data.id;
+         advice.innerHTML = data.advice;
+
+      }
+
+   } catch(err) {
+
+      console.log('Error fetching advice:', err);
+
+   }
 
 });
