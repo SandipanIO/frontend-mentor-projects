@@ -35,20 +35,20 @@
    <a href="#" class="skip-to-main-content">Skip to main content</a>
 
    <!-- Header -->
-   <header id="header" class="header" data-menu-open="false">
+   <header id="header" class="header" data-mobile-menu-open="false">
       <div class="container">
          <div class="header__wrapper">
             <!-- Logo -->
             <img src="images/logo.svg" alt="Loopstudios" class="logo">
             <!-- Main Navigation -->
             <nav id="main-nav" class="main-nav" aria-label="Primary">
-               <button id="btn-menu" class="btn | btn__menu">
-                  <img id="menu-icon" class="btn__menu-icon" src="images/icon-hamburger.svg" alt="">
+               <button id="btn-menu" class="btn | btn__menu" aria-label="Menu" 
+                        aria-controls="main-nav-list" aria-expanded="false">
+                  <span class="main-nav__line1"></span>
+                  <span class="main-nav__line2"></span>
+                  <span class="main-nav__line3"></span>
                </button>
-               <button id="btn-close" class="btn | btn__close">
-                  <img id="close-icon" class="btn__close-icon" src="images/icon-close.svg" alt="">
-               </button>
-               <ul id="main-nav-list" class="main-nav__list" role="list">
+               <ul id="main-nav-list" class="main-nav__list" role="list" data-mobile-menu-visible="false">
                   <li class="main-nav__item" role="listitem">
                      <a href="#" class="link main-nav__link">About</a>
                   </li>

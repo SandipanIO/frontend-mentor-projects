@@ -23,52 +23,52 @@ const bodyOverflowVisible = () => {
 /* --------------------------------------------------------------------------- */
 
 const header = document.querySelector('#header');
-const mainNav = document.querySelector('#main-nav');
 const mainNavList = document.querySelector('#main-nav-list');
-
 const btnMenu = document.querySelector('#btn-menu');
-const btnClose = document.querySelector('#btn-close');
+const lines = btnMenu.querySelectorAll('span');
 
-window.addEventListener('resize', () => {
-   
-   if(window.innerWidth > 736) { 
-      
-      header.setAttribute('data-menu-open', false);
-      btnMenu.style.display = 'none';
-      btnClose.style.display = 'none';
-      mainNavList.style.display = 'flex';
+// openMenu() Function
+const openMenu = () => {
 
-      bodyOverflowVisible();
-   
-   } else if(window.innerWidth < 736) {
-      
-      btnMenu.style.display = 'block';
-      mainNavList.style.display = 'none';
+   header.setAttribute('data-mobile-menu-open', true);
+   mainNavList.setAttribute('data-mobile-menu-visible', true);
+   btnMenu.setAttribute('aria-expanded', 'true');
+   btnMenu.setAttribute('aria-label', 'Close');
 
+   lines.forEach((line, count) => {
+      count++;
+      line.classList.add('main-nav__cross' + count);
+   });
+
+   bodyOverflowHidden();
+
+}
+
+// closeMenu() Function
+const closeMenu = () => {
+
+   header.setAttribute('data-mobile-menu-open', false);
+   mainNavList.setAttribute('data-mobile-menu-visible', false);
+   btnMenu.setAttribute('aria-expanded', false);
+   btnMenu.setAttribute('aria-label', 'Menu');
+
+   lines.forEach((line, count) => {
+      count++;
+      line.classList.remove('main-nav__cross' + count);
+   });
+
+   bodyOverflowVisible();
+
+}
+
+btnMenu.addEventListener('click', e => {
+
+   const visibility = mainNavList.getAttribute('data-mobile-menu-visible');
+
+   if(visibility === 'false') {
+      openMenu();
+   } else {
+      closeMenu();
    }
-});
 
-mainNav.addEventListener('click', e => {
-
-   if(e.target.id === 'btn-menu' || e.target.id === 'menu-icon') {
-      
-      header.setAttribute('data-menu-open', true);
-      btnMenu.style.display = 'none';
-      btnClose.style.display = 'block';
-      mainNavList.style.display = 'flex';
-
-      bodyOverflowHidden();
-
-   }
-
-   if(e.target.id === 'btn-close' || e.target.id === 'close-icon') {
-      
-      header.setAttribute('data-menu-open', false);
-      btnMenu.style.display = 'block';
-      btnClose.style.display = 'none';
-      mainNavList.style.display = 'none';
-
-      bodyOverflowVisible();
-
-   }
 });
