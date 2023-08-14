@@ -172,7 +172,6 @@ body {
 
 .todo__item {
    border-bottom: 1px solid var(--color-border);
-   cursor: move;
 }
 
 .todo__item-box {
