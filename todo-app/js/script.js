@@ -38,7 +38,6 @@ const createTodo = (id, task, status) => {
    li.classList.add('todo__item');
    li.dataset.id = id;
    li.setAttribute('role', 'listitem');
-   li.setAttribute('draggable', true);
 
    li.innerHTML = `
       <div class="todo__item-box">
@@ -162,54 +161,6 @@ const activeButton = id => {
    });
 };
 
-/* ---------------------------------------------------------------------------- */
-/* dragAndDrop() - drag and drop to reorder items */
-/* ---------------------------------------------------------------------------- */
-
-const dragAndDrop = (allTodos) => {
-   const items = document.querySelectorAll('.todo__item');
-
-   items.forEach((item, index) => {
-
-      item.addEventListener('dragstart', e => {
-         item.classList.add('dragging');
-      });
-
-      item.addEventListener('dragend', e => {
-         item.classList.remove('dragging');
-      });
-
-   });
-
-   todoList.addEventListener('dragover', e => {
-      e.preventDefault();
-
-      const afterElement = getDragAfterElement(todoList, e.clientY);
-      const draggable = document.querySelector('.dragging');
-
-      if (afterElement == null) {
-        todoList.appendChild(draggable);
-      } else {
-        todoList.insertBefore(draggable, afterElement);
-      }
-   });
-}
-  
-   function getDragAfterElement(todoList, y) {
-      const draggableElements = [...todoList.querySelectorAll('.todo__item:not(.dragging)')];
-  
-      return draggableElements.reduce((closest, child) => {
-         const box = child.getBoundingClientRect();
-         const offset = y - box.top - box.height / 2;
-
-         if (offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child }
-         } else {
-         return closest;
-      }
-    }, { offset: Number.NEGATIVE_INFINITY }).element;
-  }
-
 /*********************************************************************************/
 /* Event Listeners */
 /*********************************************************************************/
@@ -245,8 +196,6 @@ form.addEventListener('submit', e => {
    // Reset the form
    form.reset();
 
-   // call the dragAndDrop function
-   dragAndDrop(allTodos);
 });
 
 /* ---------------------------------------------------------------------------- */
@@ -442,6 +391,4 @@ if(JSON.parse(localStorage.getItem('todos')).length > 0) {
    // Update the active todos left
    todosLeft();
 
-   // call the dragAndDrop function
-   dragAndDrop(allTodos);
 }
