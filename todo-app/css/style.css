@@ -97,8 +97,7 @@ body {
    top: 10%;
    left: 50%;
    transform: translateX(-50%);
-   width: 100%;
-   max-width: calc(450rem / 16);
+   width: min(calc(450rem / 16), 100% - 2em);
 }
 
 .todo__header {
@@ -262,4 +261,24 @@ body {
 
 .hide {
    display: none;
+}
+
+@media (max-width: 475px) {
+
+   .todo__container {
+      margin-block: 2.5em 6em;
+   }
+
+   .todo__filter {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      justify-content: center;
+      background-color: var(--color-container);
+      width: 100%;
+      padding: 1.5em;
+      border-radius: 0.2em;
+      box-shadow: 0 0 10px rgba(0,0,0, 0.15);
+      margin-bottom: 3em;
+   }
 }
