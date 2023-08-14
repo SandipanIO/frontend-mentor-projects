@@ -7,3 +7,7 @@
 5. Huddle Landing Page - https://sandipan-huddle-landing-page.netlify.app/
 6. FAQ Accordion Card - https://sandipan-faq-accordion-card.netlify.app/
 7. Sunnyside Agency Landing Page - https://sandipan-sunnyside-agency.netlify.app/
+8. Todo App - https://sandipan-todo-app.netlify.app/
+9. Loopstudios Landing Page - https://sandipan-loopstudios.netlify.app/
+10. 3-column Preview Card Component - https://sandipan-three-column-card.netlify.app/
+11. Advice Generator App - https://sandipan-advice-generator.netlify.app/
