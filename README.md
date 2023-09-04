@@ -11,3 +11,4 @@
 9. Loopstudios Landing Page - https://sandipan-loopstudios.netlify.app/
 10. 3-column Preview Card Component - https://sandipan-three-column-card.netlify.app/
 11. Advice Generator App - https://sandipan-advice-generator.netlify.app/
+12. Huddle landing with single intro section - https://sandipan-huddle-page.netlify.app/
