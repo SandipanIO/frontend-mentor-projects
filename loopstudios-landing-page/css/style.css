@@ -458,8 +458,7 @@ body {
 }
 
 .events__grid {
-   display: flex;
-   flex-wrap: wrap;
+   display: grid;
    gap: 1.25em;
    margin-block: 2em 3em;
 }
@@ -506,6 +505,7 @@ body {
    
    .events__grid {
       grid-area: events-grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2em;
       margin-block: 3em 7em;
    }
@@ -528,6 +528,13 @@ body {
 
    .events__image-box:hover .events__img {
       transform: scale(1.1);
+   }
+}
+
+@media (min-width: 60em) {
+   
+   .events__grid {
+      grid-template-columns: repeat(4, 1fr);
    }
 }
 
